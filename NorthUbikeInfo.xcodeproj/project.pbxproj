@@ -7,15 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B66C8E021D98EEBC005560F5 /* NewTaipeiUbikeTableViewTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B66C8E011D98EEBC005560F5 /* NewTaipeiUbikeTableViewTableViewController.m */; };
+		B66C8E051D98F646005560F5 /* NewTaipeiDetailMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B66C8E041D98F646005560F5 /* NewTaipeiDetailMapViewController.m */; };
+		B66C8E2B1D990657005560F5 /* TaoyuanMainMap.m in Sources */ = {isa = PBXBuildFile; fileRef = B66C8E2A1D990657005560F5 /* TaoyuanMainMap.m */; };
+		B66C8E2F1D990B5F005560F5 /* TaoyuanUbikeTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B66C8E2E1D990B5F005560F5 /* TaoyuanUbikeTableView.m */; };
+		B66C8E321D991148005560F5 /* TaoyuanDetailMap.m in Sources */ = {isa = PBXBuildFile; fileRef = B66C8E311D991148005560F5 /* TaoyuanDetailMap.m */; };
+		B6C696261D997907002F9CF3 /* bicycle.png in Resources */ = {isa = PBXBuildFile; fileRef = B6C696251D997907002F9CF3 /* bicycle.png */; };
 		B6C778641D97CD9D000181E9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C778631D97CD9D000181E9 /* main.m */; };
 		B6C778671D97CD9D000181E9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C778661D97CD9D000181E9 /* AppDelegate.m */; };
 		B6C7786A1D97CD9D000181E9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C778691D97CD9D000181E9 /* ViewController.m */; };
 		B6C7786D1D97CD9D000181E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6C7786B1D97CD9D000181E9 /* Main.storyboard */; };
 		B6C7786F1D97CD9D000181E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6C7786E1D97CD9D000181E9 /* Assets.xcassets */; };
 		B6C778721D97CD9D000181E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6C778701D97CD9D000181E9 /* LaunchScreen.storyboard */; };
+		B6C7787B1D97CDAF000181E9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6C7787A1D97CDAF000181E9 /* CoreLocation.framework */; };
+		B6C7787D1D97CDB5000181E9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6C7787C1D97CDB5000181E9 /* MapKit.framework */; };
+		B6C778801D97CE8C000181E9 /* TaipeiUbikeTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C7787F1D97CE8C000181E9 /* TaipeiUbikeTableView.m */; };
+		B6C778861D97D781000181E9 /* TaipeiDetailMap.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C778851D97D781000181E9 /* TaipeiDetailMap.m */; };
+		B6C7788A1D97E99E000181E9 /* NewTaipeiMainMap.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C778891D97E99E000181E9 /* NewTaipeiMainMap.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B66C8E001D98EEBC005560F5 /* NewTaipeiUbikeTableViewTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewTaipeiUbikeTableViewTableViewController.h; sourceTree = "<group>"; };
+		B66C8E011D98EEBC005560F5 /* NewTaipeiUbikeTableViewTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewTaipeiUbikeTableViewTableViewController.m; sourceTree = "<group>"; };
+		B66C8E031D98F646005560F5 /* NewTaipeiDetailMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewTaipeiDetailMapViewController.h; sourceTree = "<group>"; };
+		B66C8E041D98F646005560F5 /* NewTaipeiDetailMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewTaipeiDetailMapViewController.m; sourceTree = "<group>"; };
+		B66C8E291D990657005560F5 /* TaoyuanMainMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaoyuanMainMap.h; sourceTree = "<group>"; };
+		B66C8E2A1D990657005560F5 /* TaoyuanMainMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaoyuanMainMap.m; sourceTree = "<group>"; };
+		B66C8E2D1D990B5F005560F5 /* TaoyuanUbikeTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaoyuanUbikeTableView.h; sourceTree = "<group>"; };
+		B66C8E2E1D990B5F005560F5 /* TaoyuanUbikeTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaoyuanUbikeTableView.m; sourceTree = "<group>"; };
+		B66C8E301D991148005560F5 /* TaoyuanDetailMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaoyuanDetailMap.h; sourceTree = "<group>"; };
+		B66C8E311D991148005560F5 /* TaoyuanDetailMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaoyuanDetailMap.m; sourceTree = "<group>"; };
+		B6C696251D997907002F9CF3 /* bicycle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bicycle.png; sourceTree = "<group>"; };
 		B6C7785F1D97CD9D000181E9 /* NorthUbikeInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NorthUbikeInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6C778631D97CD9D000181E9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B6C778651D97CD9D000181E9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +48,14 @@
 		B6C7786E1D97CD9D000181E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6C778711D97CD9D000181E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6C778731D97CD9D000181E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6C7787A1D97CDAF000181E9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B6C7787C1D97CDB5000181E9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		B6C7787E1D97CE8C000181E9 /* TaipeiUbikeTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaipeiUbikeTableView.h; sourceTree = "<group>"; };
+		B6C7787F1D97CE8C000181E9 /* TaipeiUbikeTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaipeiUbikeTableView.m; sourceTree = "<group>"; };
+		B6C778841D97D781000181E9 /* TaipeiDetailMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaipeiDetailMap.h; sourceTree = "<group>"; };
+		B6C778851D97D781000181E9 /* TaipeiDetailMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaipeiDetailMap.m; sourceTree = "<group>"; };
+		B6C778881D97E99E000181E9 /* NewTaipeiMainMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewTaipeiMainMap.h; sourceTree = "<group>"; };
+		B6C778891D97E99E000181E9 /* NewTaipeiMainMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewTaipeiMainMap.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +63,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6C7787D1D97CDB5000181E9 /* MapKit.framework in Frameworks */,
+				B6C7787B1D97CDAF000181E9 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B66C8DFF1D98EDBE005560F5 /* NewTaipei */ = {
+			isa = PBXGroup;
+			children = (
+				B6C778881D97E99E000181E9 /* NewTaipeiMainMap.h */,
+				B6C778891D97E99E000181E9 /* NewTaipeiMainMap.m */,
+				B66C8E001D98EEBC005560F5 /* NewTaipeiUbikeTableViewTableViewController.h */,
+				B66C8E011D98EEBC005560F5 /* NewTaipeiUbikeTableViewTableViewController.m */,
+				B66C8E031D98F646005560F5 /* NewTaipeiDetailMapViewController.h */,
+				B66C8E041D98F646005560F5 /* NewTaipeiDetailMapViewController.m */,
+			);
+			name = NewTaipei;
+			sourceTree = "<group>";
+		};
+		B66C8E2C1D99065D005560F5 /* Taoyuan */ = {
+			isa = PBXGroup;
+			children = (
+				B66C8E291D990657005560F5 /* TaoyuanMainMap.h */,
+				B66C8E2A1D990657005560F5 /* TaoyuanMainMap.m */,
+				B66C8E2D1D990B5F005560F5 /* TaoyuanUbikeTableView.h */,
+				B66C8E2E1D990B5F005560F5 /* TaoyuanUbikeTableView.m */,
+				B66C8E301D991148005560F5 /* TaoyuanDetailMap.h */,
+				B66C8E311D991148005560F5 /* TaoyuanDetailMap.m */,
+			);
+			name = Taoyuan;
+			sourceTree = "<group>";
+		};
 		B6C778561D97CD9D000181E9 = {
 			isa = PBXGroup;
 			children = (
 				B6C778611D97CD9D000181E9 /* NorthUbikeInfo */,
 				B6C778601D97CD9D000181E9 /* Products */,
+				B6C778791D97CDAF000181E9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,10 +117,12 @@
 		B6C778611D97CD9D000181E9 /* NorthUbikeInfo */ = {
 			isa = PBXGroup;
 			children = (
+				B6C696251D997907002F9CF3 /* bicycle.png */,
 				B6C778651D97CD9D000181E9 /* AppDelegate.h */,
 				B6C778661D97CD9D000181E9 /* AppDelegate.m */,
-				B6C778681D97CD9D000181E9 /* ViewController.h */,
-				B6C778691D97CD9D000181E9 /* ViewController.m */,
+				B6C778871D97E6DD000181E9 /* Taipei */,
+				B66C8DFF1D98EDBE005560F5 /* NewTaipei */,
+				B66C8E2C1D99065D005560F5 /* Taoyuan */,
 				B6C7786B1D97CD9D000181E9 /* Main.storyboard */,
 				B6C7786E1D97CD9D000181E9 /* Assets.xcassets */,
 				B6C778701D97CD9D000181E9 /* LaunchScreen.storyboard */,
@@ -77,6 +138,28 @@
 				B6C778631D97CD9D000181E9 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B6C778791D97CDAF000181E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B6C7787C1D97CDB5000181E9 /* MapKit.framework */,
+				B6C7787A1D97CDAF000181E9 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B6C778871D97E6DD000181E9 /* Taipei */ = {
+			isa = PBXGroup;
+			children = (
+				B6C778681D97CD9D000181E9 /* ViewController.h */,
+				B6C778691D97CD9D000181E9 /* ViewController.m */,
+				B6C7787E1D97CE8C000181E9 /* TaipeiUbikeTableView.h */,
+				B6C7787F1D97CE8C000181E9 /* TaipeiUbikeTableView.m */,
+				B6C778841D97D781000181E9 /* TaipeiDetailMap.h */,
+				B6C778851D97D781000181E9 /* TaipeiDetailMap.m */,
+			);
+			name = Taipei;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -111,7 +194,7 @@
 					B6C7785E1D97CD9D000181E9 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 8DR7TR6R4T;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -139,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6C778721D97CD9D000181E9 /* LaunchScreen.storyboard in Resources */,
+				B6C696261D997907002F9CF3 /* bicycle.png in Resources */,
 				B6C7786F1D97CD9D000181E9 /* Assets.xcassets in Resources */,
 				B6C7786D1D97CD9D000181E9 /* Main.storyboard in Resources */,
 			);
@@ -151,9 +235,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6C778801D97CE8C000181E9 /* TaipeiUbikeTableView.m in Sources */,
 				B6C7786A1D97CD9D000181E9 /* ViewController.m in Sources */,
+				B6C7788A1D97E99E000181E9 /* NewTaipeiMainMap.m in Sources */,
+				B66C8E2B1D990657005560F5 /* TaoyuanMainMap.m in Sources */,
+				B66C8E021D98EEBC005560F5 /* NewTaipeiUbikeTableViewTableViewController.m in Sources */,
 				B6C778671D97CD9D000181E9 /* AppDelegate.m in Sources */,
+				B6C778861D97D781000181E9 /* TaipeiDetailMap.m in Sources */,
 				B6C778641D97CD9D000181E9 /* main.m in Sources */,
+				B66C8E2F1D990B5F005560F5 /* TaoyuanUbikeTableView.m in Sources */,
+				B66C8E051D98F646005560F5 /* NewTaipeiDetailMapViewController.m in Sources */,
+				B66C8E321D991148005560F5 /* TaoyuanDetailMap.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +292,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -248,6 +341,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -273,11 +367,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8DR7TR6R4T;
 				INFOPLIST_FILE = NorthUbikeInfo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.NorthUbikeInfo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "ec0d7388-67fa-447b-aa10-90349aade058";
+				PROVISIONING_PROFILE_SPECIFIER = Provisioning_Profile_Development_Wayne;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -285,11 +385,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8DR7TR6R4T;
 				INFOPLIST_FILE = NorthUbikeInfo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.NorthUbikeInfo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "975e1da8-283a-44f2-8a9c-ec11d0a45c89";
+				PROVISIONING_PROFILE_SPECIFIER = Provisioning_Profile_Distribution_Wayne;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
@@ -312,6 +419,7 @@
 				B6C778781D97CD9D000181E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

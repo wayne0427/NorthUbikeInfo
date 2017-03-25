@@ -1,26 +1,496 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="egK-vc-3Eb">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--台北市-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iF8-US-4WF">
+                                <frame key="frameInset" width="1000" height="1000"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="6kq-q3-wfP"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="iF8-US-4WF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="4gW-fn-jMb"/>
+                            <constraint firstItem="iF8-US-4WF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Amg-OX-BjT"/>
+                            <constraint firstItem="iF8-US-4WF" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="isE-Kz-qOB"/>
+                            <constraint firstAttribute="trailing" secondItem="iF8-US-4WF" secondAttribute="trailing" id="xX6-2Y-gTD"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="台北市" id="h2d-Vz-nlZ">
+                        <barButtonItem key="rightBarButtonItem" title="站點列表" id="bAo-hw-GQS">
+                            <connections>
+                                <segue destination="HRF-GD-ebL" kind="show" id="RLb-dw-RNl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="MapViewTpUbike" destination="iF8-US-4WF" id="2DB-cY-3oy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2500" y="122.78860569715144"/>
+        </scene>
+        <!--Taipei Ubike Table View-->
+        <scene sceneID="7Qv-oC-IGx">
+            <objects>
+                <tableViewController storyboardIdentifier="TaipeiUbikeTableView" id="HRF-GD-ebL" customClass="TaipeiUbikeTableView" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="the-vM-d9f">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="cTa-DP-9gf" detailTextLabel="vBO-q4-R8c" style="IBUITableViewCellStyleValue1" id="Nxe-PP-PHp">
+                                <rect key="frame" x="0.0" y="92" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nxe-PP-PHp" id="cek-BS-nUA">
+                                    <frame key="frameInset" width="414" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cTa-DP-9gf">
+                                            <frame key="frameInset" minX="15" minY="11.999999999999998" width="33.333333333333336" height="20.333333333333332"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vBO-q4-R8c">
+                                            <frame key="frameInset" minX="355" minY="11.999999999999998" width="44" height="20.333333333333332"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="HRF-GD-ebL" id="auK-Rs-7Rg"/>
+                            <outlet property="delegate" destination="HRF-GD-ebL" id="WaF-LE-hZH"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2ZN-UU-CbX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3306.4000000000001" y="122.78860569715144"/>
+        </scene>
+        <!--Taipei Detail Map-->
+        <scene sceneID="55Z-WY-Pnc">
+            <objects>
+                <viewController storyboardIdentifier="TaipeiDetailMap" id="hx9-pc-n4G" customClass="TaipeiDetailMap" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Kgu-2G-xnf"/>
+                        <viewControllerLayoutGuide type="bottom" id="7Bk-Cr-TP8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kxj-Je-qbO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="NewTaipeiUbikeTableViewTableViewController" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="fa1-4i-YCK">
+                                <frame key="frameInset" width="1000" height="1000"/>
+                                <connections>
+                                    <outlet property="delegate" destination="hx9-pc-n4G" id="rl6-rg-o3j"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fa1-4i-YCK" firstAttribute="bottom" secondItem="7Bk-Cr-TP8" secondAttribute="top" id="1ul-E8-AJa"/>
+                            <constraint firstAttribute="trailing" secondItem="fa1-4i-YCK" secondAttribute="trailing" id="2aK-Jm-xa8"/>
+                            <constraint firstItem="fa1-4i-YCK" firstAttribute="top" secondItem="kxj-Je-qbO" secondAttribute="top" id="fbT-vV-bFO"/>
+                            <constraint firstItem="fa1-4i-YCK" firstAttribute="leading" secondItem="kxj-Je-qbO" secondAttribute="leading" id="j9K-yz-RoJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="taipeiDetailMapView" destination="fa1-4i-YCK" id="LDE-nh-Kie"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dr2-dS-QG4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4177" y="123"/>
+        </scene>
+        <!--Taipei Ubike-->
+        <scene sceneID="E4G-hO-Bx7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="k0w-wz-WbL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Taipei Ubike" id="iOT-ID-yXq"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Sap-E9-b1U">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="swX-ab-DbX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HRn-Hq-Rqz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1780" y="122.78860569715144"/>
+        </scene>
+        <!--新北市-->
+        <scene sceneID="tnK-OT-CVd">
+            <objects>
+                <viewController storyboardIdentifier="NewTaipeiMainMap" id="FIR-dO-Uht" customClass="NewTaipeiMainMap" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zeJ-Vt-lfW"/>
+                        <viewControllerLayoutGuide type="bottom" id="FG7-YG-fmg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7j8-gt-zOG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="InH-GZ-uuJ">
+                                <frame key="frameInset" width="1000" height="1000"/>
+                                <connections>
+                                    <outlet property="delegate" destination="FIR-dO-Uht" id="wDU-f5-opc"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="InH-GZ-uuJ" firstAttribute="top" secondItem="7j8-gt-zOG" secondAttribute="top" id="2A5-Py-BSd"/>
+                            <constraint firstAttribute="trailing" secondItem="InH-GZ-uuJ" secondAttribute="trailing" id="b6F-iH-e6J"/>
+                            <constraint firstAttribute="bottom" secondItem="InH-GZ-uuJ" secondAttribute="bottom" id="bGP-xO-9tw"/>
+                            <constraint firstItem="InH-GZ-uuJ" firstAttribute="leading" secondItem="7j8-gt-zOG" secondAttribute="leading" id="rTS-nT-eMH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="新北市" id="5eM-kP-8do">
+                        <barButtonItem key="rightBarButtonItem" title="站點列表" id="bFl-20-gfP">
+                            <connections>
+                                <segue destination="eLR-Pa-N4A" kind="show" id="eOo-0r-ppr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mainMapViewNTPC" destination="InH-GZ-uuJ" id="xr6-Kc-ohS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FQi-Ql-zMA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2500" y="856.82158920539734"/>
+        </scene>
+        <!--桃園市-->
+        <scene sceneID="NT7-lp-tr5">
+            <objects>
+                <viewController storyboardIdentifier="TaoyuanMainMap" id="Y7D-gW-THG" customClass="TaoyuanMainMap" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XyZ-A5-81b"/>
+                        <viewControllerLayoutGuide type="bottom" id="Fmi-Kb-gv1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="V7w-pF-gbh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NpQ-aT-3Ug">
+                                <frame key="frameInset" width="1000" height="1000"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Y7D-gW-THG" id="Drk-Oi-9Du"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NpQ-aT-3Ug" firstAttribute="top" secondItem="V7w-pF-gbh" secondAttribute="top" id="8vW-73-37t"/>
+                            <constraint firstAttribute="trailing" secondItem="NpQ-aT-3Ug" secondAttribute="trailing" id="EMc-bq-cEg"/>
+                            <constraint firstItem="NpQ-aT-3Ug" firstAttribute="leading" secondItem="V7w-pF-gbh" secondAttribute="leading" id="Jj8-tY-ALW"/>
+                            <constraint firstAttribute="bottom" secondItem="NpQ-aT-3Ug" secondAttribute="bottom" id="pVW-5g-OgX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="桃園市" id="mmT-Kf-RtV">
+                        <barButtonItem key="rightBarButtonItem" title="站點列表" id="w7J-za-ROe">
+                            <connections>
+                                <segue destination="wfs-Dj-0bB" kind="show" id="uNd-Xv-E3a"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mainMapTaoyuan" destination="NpQ-aT-3Ug" id="8dT-HR-LYE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2r0-Sy-BSP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2528.8000000000002" y="1636.7316341829087"/>
+        </scene>
+        <!--Taoyuan Ubike Table View-->
+        <scene sceneID="Zcc-3T-mbe">
+            <objects>
+                <tableViewController storyboardIdentifier="TaoyuanUbikeTableView" id="wfs-Dj-0bB" customClass="TaoyuanUbikeTableView" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="2Og-yy-0dv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="zhI-tw-qqw" detailTextLabel="8g6-9Y-kCh" style="IBUITableViewCellStyleValue1" id="abS-Bx-UuB">
+                                <rect key="frame" x="0.0" y="92" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="abS-Bx-UuB" id="sGN-xc-Xf7">
+                                    <frame key="frameInset" width="414" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zhI-tw-qqw">
+                                            <frame key="frameInset" minX="15" minY="11.999999999999998" width="33.333333333333336" height="20.333333333333332"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8g6-9Y-kCh">
+                                            <frame key="frameInset" minX="355" minY="11.999999999999998" width="44" height="20.333333333333332"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="wfs-Dj-0bB" id="3sZ-A6-gwa"/>
+                            <outlet property="delegate" destination="wfs-Dj-0bB" id="xlL-Yb-yhW"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8I8-Mi-qMp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3306" y="1639"/>
+        </scene>
+        <!--Taoyuan Detail Map-->
+        <scene sceneID="V47-pe-t9d">
+            <objects>
+                <viewController storyboardIdentifier="TaoyuanDetailMap" id="vvD-Bu-ohp" customClass="TaoyuanDetailMap" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9M8-85-6IR"/>
+                        <viewControllerLayoutGuide type="bottom" id="A7j-RQ-hAT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gDb-PL-Oa5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="uzU-md-3Mr">
+                                <frame key="frameInset" width="667" height="375"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="uzU-md-3Mr" secondAttribute="trailing" id="2F1-qB-L7g"/>
+                            <constraint firstItem="uzU-md-3Mr" firstAttribute="leading" secondItem="gDb-PL-Oa5" secondAttribute="leading" id="BVw-8D-rFc"/>
+                            <constraint firstItem="uzU-md-3Mr" firstAttribute="bottom" secondItem="A7j-RQ-hAT" secondAttribute="top" id="IjI-qt-qWt"/>
+                            <constraint firstItem="uzU-md-3Mr" firstAttribute="top" secondItem="gDb-PL-Oa5" secondAttribute="top" id="lkx-WY-q4W"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapViewTaoyuan" destination="uzU-md-3Mr" id="6J4-AQ-QYR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Os1-La-KT2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4176.8000000000002" y="1640.3298350824589"/>
+        </scene>
+        <!--New Taipei Ubike Table View Table View Controller-->
+        <scene sceneID="qZ1-gV-jgt">
+            <objects>
+                <tableViewController storyboardIdentifier="NewTaipeiUbikeTableViewTableViewController" id="eLR-Pa-N4A" customClass="NewTaipeiUbikeTableViewTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="KI3-v4-yX5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="zcL-EK-3rS" detailTextLabel="bXm-Lg-v9F" style="IBUITableViewCellStyleValue1" id="GQB-dz-ecE">
+                                <rect key="frame" x="0.0" y="92" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GQB-dz-ecE" id="UkN-Qw-Rym">
+                                    <frame key="frameInset" width="414" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zcL-EK-3rS">
+                                            <frame key="frameInset" minX="15" minY="11.999999999999998" width="33.333333333333336" height="20.333333333333332"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bXm-Lg-v9F">
+                                            <frame key="frameInset" minX="355" minY="11.999999999999998" width="44" height="20.333333333333332"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="eLR-Pa-N4A" id="WfK-Ar-Wur"/>
+                            <outlet property="delegate" destination="eLR-Pa-N4A" id="qbF-gy-SuQ"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xRz-yr-0hC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3306" y="857"/>
+        </scene>
+        <!--New Taipei Detail Map View Controller-->
+        <scene sceneID="P74-wU-Mys">
+            <objects>
+                <viewController storyboardIdentifier="NewTaipeiDetailMapViewController" id="A7P-OH-6xU" customClass="NewTaipeiDetailMapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5eq-QH-0ho"/>
+                        <viewControllerLayoutGuide type="bottom" id="Aio-Nz-Neh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4nJ-iU-DAD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="yJp-3V-4hN">
+                                <frame key="frameInset" width="1024" height="1366"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Aio-Nz-Neh" firstAttribute="top" secondItem="yJp-3V-4hN" secondAttribute="bottom" id="9Qm-f0-vaR"/>
+                            <constraint firstAttribute="trailing" secondItem="yJp-3V-4hN" secondAttribute="trailing" id="9d9-Og-c57"/>
+                            <constraint firstItem="yJp-3V-4hN" firstAttribute="leading" secondItem="4nJ-iU-DAD" secondAttribute="leading" id="9gr-uQ-v3c"/>
+                            <constraint firstItem="yJp-3V-4hN" firstAttribute="leading" secondItem="4nJ-iU-DAD" secondAttribute="leading" id="ObV-mq-fxb"/>
+                            <constraint firstItem="yJp-3V-4hN" firstAttribute="top" secondItem="4nJ-iU-DAD" secondAttribute="top" id="ddz-tt-bQH"/>
+                            <constraint firstItem="yJp-3V-4hN" firstAttribute="top" secondItem="4nJ-iU-DAD" secondAttribute="top" id="fJi-n7-BUr"/>
+                            <constraint firstAttribute="trailing" secondItem="yJp-3V-4hN" secondAttribute="trailing" id="jYS-KO-r9Z"/>
+                            <constraint firstItem="yJp-3V-4hN" firstAttribute="bottom" secondItem="Aio-Nz-Neh" secondAttribute="top" id="sFe-CK-7ci"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="detailMapViewNTPC" destination="yJp-3V-4hN" id="YWJ-a4-Mcx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4sF-tL-daM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4176.8000000000002" y="856.82158920539734"/>
+        </scene>
+        <!--首頁-->
+        <scene sceneID="mRK-14-Kk4">
+            <objects>
+                <viewController id="rbm-tL-cIm" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XCl-xc-paH"/>
+                        <viewControllerLayoutGuide type="bottom" id="a7R-YC-ueu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="u2Z-BP-3NX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8OC-ul-aJY">
+                                <string key="text" base64-UTF8="YES">
+COWPsOWMl+W4givmlrDljJfluIIr5qGD5ZyS5biCVWJpa2Xos4foqIo
+</string>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bicycle.png" highlightedImage="bicycle.png" translatesAutoresizingMaskIntoConstraints="NO" id="eei-nr-yho">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="450" id="Ptb-9M-Msf"/>
+                                </constraints>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.70324906102484896" green="0.85368230776326071" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="8OC-ul-aJY" secondAttribute="trailing" constant="-4" id="5fh-ce-tVj"/>
+                            <constraint firstAttribute="trailing" secondItem="eei-nr-yho" secondAttribute="trailing" id="8Sh-7J-QS2"/>
+                            <constraint firstItem="8OC-ul-aJY" firstAttribute="leading" secondItem="u2Z-BP-3NX" secondAttribute="leadingMargin" id="ACX-eR-uO2"/>
+                            <constraint firstItem="8OC-ul-aJY" firstAttribute="top" secondItem="XCl-xc-paH" secondAttribute="bottom" constant="8" id="DVF-MJ-HlV"/>
+                            <constraint firstItem="eei-nr-yho" firstAttribute="bottom" secondItem="a7R-YC-ueu" secondAttribute="top" id="ojW-5I-27r"/>
+                            <constraint firstItem="eei-nr-yho" firstAttribute="leading" secondItem="u2Z-BP-3NX" secondAttribute="leading" id="ysl-RC-QaP"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="首頁" id="nCI-qw-jwV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rDx-mb-FMj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="596.25" y="701.25"/>
+        </scene>
+        <!--NewTaipei Ubike-->
+        <scene sceneID="d9a-mC-3ur">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SOe-nB-0ko" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="NewTaipei Ubike" id="1ar-ko-92K"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BnH-5T-pj2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="FIR-dO-Uht" kind="relationship" relationship="rootViewController" id="4Fa-MJ-EOT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eZ6-Cq-vPy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1780" y="857"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="8O2-mS-Qiu">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="egK-vc-3Eb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Ld2-AX-DwI">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="rbm-tL-cIm" kind="relationship" relationship="viewControllers" id="PHc-Vk-pWZ"/>
+                        <segue destination="k0w-wz-WbL" kind="relationship" relationship="viewControllers" id="tj3-LA-mah"/>
+                        <segue destination="SOe-nB-0ko" kind="relationship" relationship="viewControllers" id="Fgj-Ck-1gA"/>
+                        <segue destination="J5j-7g-09g" kind="relationship" relationship="viewControllers" id="w60-cP-2GG"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0aL-AI-OgO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1058" y="718"/>
+        </scene>
+        <!--Taoyuan Ubike-->
+        <scene sceneID="Dq0-YG-abX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="J5j-7g-09g" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Taoyuan Ubike" id="ex1-Dt-ysC"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VM5-CO-wMn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y7D-gW-THG" kind="relationship" relationship="rootViewController" id="BZA-0x-bke"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iHZ-0a-Rm6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1780" y="1637"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bicycle.png" width="316" height="316"/>
+    </resources>
 </document>
